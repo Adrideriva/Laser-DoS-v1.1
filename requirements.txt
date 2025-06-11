@@ -1,0 +1,9 @@
+pip install ping3
+pip install scapy
+pip install threading
+pip install pillow
+
+
+If for some reason tkinter is not installed do:
+
+pip install tkinter
